@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Главная страница {% endblock %}
+
+{% block content %}
+<center><div class="features">
+    <h1>{{ title }}</h1>
+    <p>Lorem Ipsum — это видоизменённый набор слов на латинском языке,
+        который используют вместо реального текста при разработке макетов и
+        дизайна будущего сайта или приложения.</p>
+        <button class="btn btn-secondary"> На страницу про нас</button>
+
+        {% for el in values%}
+            <p>{{el}}</p>
+        {% endfor %}
+
+        {{ obj.age }}
+</div></center>
+{% endblock %}

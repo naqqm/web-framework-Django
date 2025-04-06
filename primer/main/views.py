@@ -2,8 +2,20 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request): 
-    return HttpResponse("<h4> Привет! </h4>")
+    data = {
+        'title': '!!!',
+        'values': ['some', 'hello', '123'],
+        'obj': {
+            'car': 'BMW',
+            'age': 26,
+            'hobby': 'Football'
+        }
+    }
+    return render(request, 'main/index.html', data) 
 
 def about(request): 
-    return HttpResponse("<h4> Страница о нас </h4>")
+    return render(request, 'main/about.html')
+
+def contact(request): 
+    return render(request, 'main/contact.html')
 
